@@ -1,0 +1,14 @@
+.media-item-container {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  img {
+    max-width: 100px;
+  }
+  a {
+    text-align: center;
+    display: block;
+  }
+}
