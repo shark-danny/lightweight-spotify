@@ -11,6 +11,9 @@ const Search = () => {
       <h1>Search</h1>
       <SearchForm onChange={handleSearch} />
       {loading && <p>Loading</p>}
+      {!!data?.tracks?.length && (
+        <MediaPanel title="Tracks" data={data.tracks} />
+      )}
       {!!data?.albums?.length && (
         <MediaPanel title="Albums" data={data.albums} />
       )}
@@ -19,9 +22,6 @@ const Search = () => {
       )}
       {!!data?.playlists?.length && (
         <MediaPanel title="Playlists" data={data.playlists} />
-      )}
-      {!!data?.tracks?.length && (
-        <MediaPanel title="Tracks" data={data.tracks} />
       )}
     </div>
   );
